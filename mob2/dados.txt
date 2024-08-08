@@ -1,0 +1,108 @@
+{
+    "cod_permitidos":{
+        "TCC00296":{
+            "mat":"Fundamentos de Arquiteturas de Computadores",
+            "inst":"IC",
+            "local":"https://maps.app.goo.gl/tH1Tak8tBRePeGjF6",                          
+            "tur_permitidos":{
+
+                "A1":{
+                    "dsem":"terças e quintas",
+                    "sala":"213",                    
+                    "hor":"11h às 13h"
+                },
+
+                "B1":{
+                    "dsem":"terças e quintas",
+                    "sala":"206",
+                    "hor":"11h às 13h"
+
+                }
+            }
+        },
+        "GAN00167":{
+            "mat":"Matemática Discreta",
+            "inst":"Bloco H",
+            "local":"https://maps.app.goo.gl/6u6FdQufmprA2H7B6",
+            "tur_permitidos":{
+                "B1":{
+                    "dsem":"segundas e quartas",
+                    "sala":"404",                    
+                    "hor":"14h às 16h"
+                },
+                "C1":{
+                    "dsem":"segundas e quartas",
+                    "sala":"403",                    
+                    "hor":"14h às 16h"
+                }
+            }
+        },
+
+        "GGM00137":{
+            "mat":"Fundamentos de Cálculo e Geometria",
+            "inst":"Bloco H",
+            "local":"https://maps.app.goo.gl/6u6FdQufmprA2H7B6",
+            "tur_permitidos":{
+                "D1":{
+                    "dsem":"terças e quintas",
+                    "sala":"303",                    
+                    "hor":"9h às 11h"
+                },
+                "E1":{
+                    "dsem":"terças e quintas",
+                    "sala":"501",                    
+                    "hor":"9h às 11h"
+                }
+            }
+        },
+
+        "TCC00308":{
+            "mat":"Programação de Computadores I",
+            "inst":"IC",
+            "local":"https://maps.app.goo.gl/tH1Tak8tBRePeGjF6",                          
+            "tur_permitidos":{
+
+                "A1":{
+                    "dsem":"segundas e quartas",
+                    "sala":"lab 304 às segundas, 313 às quartas",                    
+                    "hor":"11h às 13h"
+                },
+
+                "B1":{
+                    "dsem":"segundas e quartas",
+                    "sala":"313 às segundas, lab 303 às quartas",
+                    "hor":"11h às 13h"
+
+                }
+            }           
+        },
+        "TCC00346":{
+            "mat":"Laboratório de Resolução de Problemas",
+            "inst":"IC",
+            "local":"https://maps.app.goo.gl/tH1Tak8tBRePeGjF6",                          
+            "tur_permitidos":{
+
+                "AA":{
+                    "dsem":"quartas",
+                    "sala":"lab 303",                   
+                    "hor":"9h às 11h"
+                },
+
+                "BA":{
+                    "dsem":"quartas",
+                    "sala":"lab 307",
+                    "hor":"9h às 11h"
+
+                },
+                "CA":{
+                    "dsem":"segundas",
+                    "sala":"lab 303",
+                    "hor":"9h às 11h"
+                }
+            }
+        }
+
+    }
+    
+
+}

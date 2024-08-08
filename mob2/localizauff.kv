@@ -1,0 +1,206 @@
+#:import utils kivy.utils
+
+<Label>
+    font_size: 35
+    bold: True
+
+<TextInput>
+    multiline: False
+    size_hint: (0.4,0.03)
+
+<Button>
+
+    background_normal: ''
+    background_color: (252/255.0,173/255.0,54/255.0,1)
+    pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+
+Telas:
+    TelaInicial:
+    TelaInformacoes:
+    TelaInformacoes2:
+
+<TelaInicial>
+    name: "inicial"
+    FloatLayout:
+        size: root.width, root.height
+        canvas.before:
+            Color:
+                rgba: (0.2, 0.3, 0.4, 1)
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        
+        Image:
+            source: 'logo.png'
+            pos_hint: {'center_x': 0.5, 'top': 0.9}
+            size_hint: (0.75, 0.33)
+            allow_stretch: False
+
+        Label:
+            id: codigo_rotulo
+            text: "Insira o código da matéria:"
+            pos_hint:{'center_x': 0.5, 'top': 0.97}
+        
+        Label:
+            id: turma_rotulo
+            text: "Insira sua turma:"
+            pos_hint:{'center_x': 0.5, 'top': 0.86}
+        
+        TextInput:
+            id: codigo_entry
+            hint_text: "Ex: TCC00296"
+            hint_text_font_size: 15
+            pos_hint:{'center_x': 0.5 , 'top': 0.45}
+        
+        TextInput:
+            id: turma_entry
+            hint_text: "Ex: A1"
+            pos_hint:{'center_x': 0.5 , 'top': 0.34}
+
+        RoundedButton:
+            text: "Confirmar"
+            pos_hint:{'center_x': 0.5, 'top': 0.2}
+            on_release:
+                root.release(codigo_entry,turma_entry)
+                root.manager.transition.direction = "left"
+
+        
+        Label:
+            id:error
+            text:''
+            font_size:36
+            color:(1,0,0,1)
+            pos_hint:{'center_x': 0.5, 'top': 1.03}
+
+            
+
+
+<TelaInformacoes>
+    name: "informacoes"
+    FloatLayout:
+        size: root.width, root.height
+        canvas.before:
+            Color:
+                rgba: (0.2, 0.3, 0.4, 1)
+            Rectangle:
+                pos:self.pos
+                size:self.size
+
+        Image:
+            source: 'IC_pczoom.png'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            allow_stretch: True
+            keep_ratio: False
+
+        Label:
+            text:"INFORMAÇÕES"
+            font_size:40
+            font_name:'Roboto'
+            pos_hint:{'center_x' : 0.5, 'top': 1.3}
+
+        Label:
+            id:materia
+            bold: False
+            pos_hint:{'center_x' : 0.5, 'top': 1.15 }
+
+        Label:
+            id:turma
+            bold: False
+            pos_hint:{'center_x' : 0.5, 'top': 1.1 }
+
+        Label:
+            id:instituto
+            bold: False
+            pos_hint:{'center_x' : 0.5, 'top': 1.05 }
+        Label:
+            id:hora
+            bold: False
+            pos_hint:{'center_x' : 0.5, 'top': 1 }
+        
+        RoundedButton:
+            text:'VOLTAR'
+            bold:True
+            font_size: 25
+            size_hint:0.125, 0.04
+            pos_hint: {'x': 0.05, 'top':0.95}
+            on_release:
+                root.retorno()
+                root.manager.transition.direction = "right"
+
+        RoundedButton:
+            text:"Abrir local no Maps"
+            size_hint:(0.33,0.04)
+            pos_hint:{'center_x' : 0.5 , 'top':0.3}
+            on_release: root.localizar()
+
+<TelaInformacoes2>
+    name: "informacoes2"
+    FloatLayout:
+        size: root.width, root.height
+        canvas.before:
+            Color:
+                rgba: (0.2, 0.3, 0.4, 1)
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        Image:
+            source: 'BlocoH_pc.png'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            allow_stretch: True
+            keep_ratio: True
+
+        Label:
+            text:"INFORMAÇÕES"
+            font_size:40
+            font_name:'Roboto'
+            pos_hint:{'center_x' : 0.5, 'top': 1.3}
+
+        Label:
+            id:materia
+            bold: False
+            pos_hint:{'center_x' : 0.5, 'top': 1.15 }
+
+        Label:
+            id:turma
+            bold: False
+            pos_hint:{'center_x' : 0.5, 'top': 1.1 }
+
+        Label:
+            id:instituto
+            bold: False
+            pos_hint:{'center_x' : 0.5, 'top': 1.05 }
+        Label:
+            id:hora
+            bold: False
+            pos_hint:{'center_x' : 0.5, 'top': 1 }
+        
+        RoundedButton:
+            text:'VOLTAR'
+            bold:True
+            font_size: 25
+            size_hint:0.125, 0.04
+            pos_hint: {'x': 0.05, 'top':0.95}
+            on_release:
+                root.retorno()
+                root.manager.transition.direction = "right"
+
+        RoundedButton:
+            text:"Abrir local no Maps"
+            size_hint:(0.33,0.04)
+            pos_hint:{'center_x' : 0.5 , 'top':0.3}
+            on_release: root.localizar()
+
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    size_hint:(0.2375,0.04)
+    canvas.before:
+        Color:
+            rgba: (252/255.0,173/255.0,54/255.0,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [30]
+
+    
